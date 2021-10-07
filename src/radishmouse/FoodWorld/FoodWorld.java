@@ -12,6 +12,7 @@ import radishmouse.FoodWorld.Commands.Clear;
 import radishmouse.FoodWorld.Commands.Help;
 import radishmouse.FoodWorld.Commands.List;
 import radishmouse.FoodWorld.Commands.Mute;
+import radishmouse.FoodWorld.Commands.Rules;
 import radishmouse.FoodWorld.Events.GuildMemberJoin;
 import radishmouse.FoodWorld.Events.GuildMessageReactionAdd;
 import radishmouse.FoodWorld.Events.GuildMessageReceived;
@@ -32,6 +33,7 @@ public class FoodWorld {
 		jda.addEventListener(new List());
 		jda.addEventListener(new Help());
 		jda.addEventListener(new Mute());
+		jda.addEventListener(new Rules());
 		jda.addEventListener(new GuildMemberJoin());
 		jda.addEventListener(new GuildMessageReceived());
 		jda.addEventListener(new GuildMessageReactionAdd());
