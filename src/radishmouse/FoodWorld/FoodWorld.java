@@ -6,7 +6,6 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
-import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import radishmouse.FoodWorld.Commands.Clear;
 import radishmouse.FoodWorld.Commands.Help;
@@ -24,10 +23,11 @@ public class FoodWorld {
 	
 	//main method
 	public static void main(String[] args) throws LoginException {
-		jda = JDABuilder.createDefault(token).enableIntents(GatewayIntent.GUILD_MEMBERS).build();
-
+		jda = JDABuilder.createDefault(token).enableIntents(GatewayIntent.GUILD_MEMBERS).build(); 
 		jda.getPresence().setStatus(OnlineStatus.ONLINE);
-		jda.getPresence().setPresence(Activity.playing("you | -help"), false);
+		
+		// set Status
+		Status.status();
 		
 		jda.addEventListener(new Clear());
 		jda.addEventListener(new List());
